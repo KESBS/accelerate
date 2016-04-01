@@ -2,7 +2,7 @@
  Theme Name:   Accelerate Theme Child
  Theme URI:    http://example.com/accelerate-theme-child/
  Description:  Accelerate Child Theme - Accelerate
- Author:       Your Name!
+ Author:       Karen Storr
  Author URI:   http://example.com
  Template:     accelerate-theme
  Version:      1.0.0
@@ -26,13 +26,29 @@
     background: none repeat scroll 0 0 #45ac9d;
 }
 
+#masthead nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
 #masthead nav ul li {
 	float:left;
-	margin:0 10px;
+	margin:0px 30px;
+	text-transform: uppercase;
+}
+
+/* blog post on homepage */
+
+.recent-posts {
+    clear: both;
+    margin: 100px 0 0;
+    overflow: hidden;
 }
 
 .blog-post {
 	width: 50%;
+	padding-right: 50px;
+	float: left;
 }
 
 .blog-post h4 {
@@ -40,12 +56,14 @@
 	font-family: 'Montserrat';
 	color: #a6a6a6;
 	text-transform: uppercase;
+	margin-top: 0;
 }
 
 .blog-post h2 {
 	font-size: 24px;
 	font-family: 'Montserrat';
 	font-weight: bold;
+	margin: 36px 0;
 }
 
 .blog-post .read-more-link {
@@ -62,6 +80,7 @@
 
 article.case-study {
 	margin:40px 0 0;
+	clear: both;
 }
 
 aside.case-study-sidebar {
@@ -76,7 +95,67 @@ div.case-study-images {
 }
 
 div.case-study-images img{
-	margin-bottom: 50px;
+	margin-bottom: 100px;
 	border: 1px solid #dddddd;
 }
-	
+
+aside.case-study-sidebar h5 {
+	font-size:16px;
+	color:#999;
+	font-weight: normal;
+	line-height: 1.33333;
+	margin: 0 0 50px;
+}	
+
+aside.case-study-sidebar h6 {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.5;
+	margin: 0 0 50px;
+}
+
+/* Homepage featured work */
+
+.featured-work {
+	overflow:auto;
+}
+
+.featured-work h4 {
+	font-family:'Montserrat';
+	text-transform:uppercase;
+	text-align:center;
+	margin:0 0 40px;
+}
+
+.featured-work ul {
+	margin:0;
+}
+
+.individual-featured-work {
+    float: left;
+    list-style-type: none;
+    margin: 0 5% 0 0;
+    width: 31%;
+}
+
+.individual-featured-work h3{
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+	margin-top: 24px;
+}
+
+.individual-featured-work:nth-child(3n) {
+    margin: 0;
+    width: 31%;
+}
+
+
+/* Footer Styles */
+
+.social-media-menu li {
+	float:left;
+	margin:0 5px;
+	text-indent:-10000px;
+	list-style-type:none;
+}

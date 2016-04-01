@@ -1,11 +1,7 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * The template for displaying case studies
+ 
  *
  * @package WordPress
  * @subpackage Accelerate_Theme
@@ -32,7 +28,7 @@ get_header(); ?>
 	<aside class="case-study-sidebar">
 			<h2><?php the_title(); ?></h2>
 			<h5><?php echo $services; ?></h5>
-			<h6>Client:  <?php echo $client; ?></h6>	
+			<h6>Client: <?php echo $client; ?></h6>	
 
 			<?php the_content(); ?>
 			
@@ -41,17 +37,17 @@ get_header(); ?>
   </aside>
 
   <div class="case-study-images">
-	  	<?php if($image_1) { ?>
-			<?php echo wp_get_attachment_image( $image_1, $size )?;
-		<?php } ?>
+	  	<?php if($image_1) { 
+			 echo wp_get_attachment_image( $image_1, $size );
+		 } ?>
 		
-		<?php if($image_2) { ?>
-			<?php echo wp_get_attachment_image( $image_2, $size )?>;
-		<?php } ?>
+		<?php if($image_2) { 
+			 echo wp_get_attachment_image( $image_2, $size );
+		 } ?>
 		
-		<?php if($image_3) { ?>
-			<?php echo wp_get_attachment_image( $image_3, $size )?>;
-		<?php } ?>
+		<?php if($image_3) { 
+			 echo wp_get_attachment_image( $image_3, $size );
+		 } ?>
   </div>
 
 			</article>
