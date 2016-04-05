@@ -154,7 +154,49 @@ aside.case-study-sidebar h6 {
 	text-align: center;
 }
 
+/* Contact Form */
 
+ .narrow-contact {
+	width:650px;
+	margin: 50px auto 0;
+	padding-bottom: 85px;
+}
+
+.narrow-contact h2 {
+	margin-bottom: 20px;
+}
+
+.narrow-contact p {
+	margin-bottom: 35px;
+}
+
+.ninja-forms-form-wrap label {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+
+#ninja_forms_field_4 {
+	background-color:#45ac9d;
+	float: right;
+	color: white;
+	width: 170px;
+	height: 50px;
+}
+
+#ninja_forms_field_1_div_wrap {
+	float: left;
+	width: 49%;
+}
+
+#ninja_forms_field_2_div_wrap {
+	float: right;
+	width: 49%;
+}
+
+#ninja_forms_form_1_response_msg.ninja-forms-response-msg {
+	font-weight: bold;
+}
 /* Footer Styles */
 
 .social-media-menu li {
