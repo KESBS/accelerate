@@ -51,3 +51,4 @@ function accelerate_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'accelerate_widgets_init' );
+

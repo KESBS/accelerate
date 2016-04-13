@@ -21,7 +21,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 				<a class="button" href="<?php echo home_url(); ?>/blog">View Our Work</a>
 			</div>
-		<?php endwhile; // end of the loop. ?>
+		
 	</div><!-- .container -->
 </section><!-- .home-page -->
 
@@ -40,7 +40,7 @@ get_header(); ?>
 					<?php echo wp_get_attachment_image($image_1, $size); ?>
 				</figure>
 		      
-		  	  	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+		  	  	<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	  	  	</li>
 	    	<?php endwhile; // end of the loop. ?>
 	   		<?php wp_reset_query(); // resets the altered query back to the original ?>
@@ -64,4 +64,13 @@ get_header(); ?>
 	   </div>
 	</div>
 </section>
+
+		<?php endwhile; // end of the loop. ?>
+	<div class='widgets'>	
+		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<div id="secondary" class="widget-area"role="complementary">
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div>
+		<?php endif; ?>
+	</div>
 <?php get_footer(); ?>

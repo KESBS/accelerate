@@ -27,6 +27,7 @@
 
 // Custom post types function
 function create_custom_post_types() {
+	
 //create a case study custom post type	
     register_post_type( 'case_studies',
         array(
@@ -37,8 +38,42 @@ function create_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array( 'slug' => 'case-studies' ),
+			)
+		);
+		
+//create custom post type for services on About page			
+	register_post_type( 'services',
+		        array(
+		            'labels' => array(
+		                'name' => __( 'Services' ),
+						'singular_name' => __( 'Service' )
+					),
+		            'public' => true,
+		            'has_archive' => false,
         )
     );
 }
 // Hook this custom post type function into the theme
 add_action( 'init', 'create_custom_post_types' );
+
+// Reverse Case Studies Archive order
+function reverse_archive_order( $query ){
+
+	if( !is_admin() && $query->is_post_type_archive('case_studies')  && $query->is_main_query() ) {
+		$query->set('order', 'ASC');
+	}
+}
+
+add_action( 'pre_get_posts', 'reverse_archive_order' );
+
+// Register dynamic sidebar.
+
+register_sidebar( array(
+	'name' =>__( 'Homepage sidebar', 'homepage-sidebar'),
+	'id' => 'sidebar-2',
+	'description' => __( 'Appears on the static front page template', 'homepage-sidebar' ),
+	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	'after_widget' => '</aside>',
+	'before_title' => '<h3 class="widget-title">',
+	'after_title' => '</h3>',
+) );
