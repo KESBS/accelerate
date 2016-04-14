@@ -30,7 +30,7 @@ get_header(); ?>
 		<h4>Featured Work</h4>
 	
 		<ul class="homepage-featured-work">
-	   	<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
+	   	<?php query_posts('posts_per_page=3&post_type=case_studies&order=ASC'); ?>
 	   		<?php while ( have_posts() ) : the_post(); 
 		   	 	$size = "medium";
 				$image_1 = get_field("image_1");
@@ -66,11 +66,22 @@ get_header(); ?>
 </section>
 
 		<?php endwhile; // end of the loop. ?>
-	<div class='widgets'>	
+		
+		<!-- Sidebar to host the twitter module -->
+		
+		
+		<?php
+		$twitter_link = get_field('twitter_link');
+		$link_name = get_field('link_name');
+		?>
+
 		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-			<div id="secondary" class="widget-area"role="complementary">
-				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			<div id="secondary" class="widget-area tweet-module" role="complementary">
+				<a href="<?php echo $twitter_link ?>"><?php dynamic_sidebar( 'sidebar-2' ); ?></a>
+				<a href="<?php echo $twitter_link ?>" class="follow-us-link"><?php echo $link_name; ?><span> &rsaquo;</span></a>
 			</div>
+		
 		<?php endif; ?>
-	</div>
+	
+	
 <?php get_footer(); ?>

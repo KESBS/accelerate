@@ -73,11 +73,11 @@
 
 /* widget on static homepage */
 
-#secondary.widget-area {
+#secondary.widget-area.tweet-module {
 	float: right;
 	width: 47%;
-	padding-left: 50px;
 }
+
 .widget-title{
 	color: #999999;
 	font-size: 16.5;
@@ -98,8 +98,11 @@
 #pi_simpletwittertweets-2 > ul > li{
 	font-weight: normal;
 }
-
-
+#secondary > a.follow-us-link{
+	color: #45ac9d;
+	font-weight: bold;
+	font-family: 'Montserrat';
+}
 
 /* Case Studies */
 
