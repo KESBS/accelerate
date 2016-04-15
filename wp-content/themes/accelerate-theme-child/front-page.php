@@ -11,7 +11,6 @@
  * @subpackage Accelerate Marketing
  * @since Accelerate Marketing 1.0
  */
-!!
 get_header(); ?>
 
 <section class="home-page">
@@ -21,7 +20,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 				<a class="button" href="<?php echo home_url(); ?>/blog">View Our Work</a>
 			</div>
-		
+		<?php endwhile ?>
 	</div><!-- .container -->
 </section><!-- .home-page -->
 
@@ -33,22 +32,20 @@ get_header(); ?>
 	   	<?php query_posts('posts_per_page=3&post_type=case_studies&order=ASC'); ?>
 	   		<?php while ( have_posts() ) : the_post(); 
 		   	 	$size = "medium";
-				$image_1 = get_field("image_1");
+					$image_1 = get_field("image_1");
 		   		?>
-			<li class="individual-featured-work">
-				<figure>
-					<?php echo wp_get_attachment_image($image_1, $size); ?>
-				</figure>
-		      
-		  	  	<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-	  	  	</li>
+				<li class="individual-featured-work">
+					<figure>
+						<?php echo wp_get_attachment_image($image_1, $size); ?>
+					</figure>
+		
+			  	<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+		  	</li>
 	    	<?php endwhile; // end of the loop. ?>
 	   		<?php wp_reset_query(); // resets the altered query back to the original ?>
 	   </ul>
-	   	
 	</div>
 </section>
-
 
 <section class="recent-posts">
 	<div class="site-content">
@@ -62,26 +59,21 @@ get_header(); ?>
 		   			<?php endwhile; // end of the loop. ?>
 		   			<?php wp_reset_query(); // resets the altered query back to the original ?>
 	   </div>
+		 
+		 <!-- Sidebar to host the twitter module -->		 
+		 <?php
+		 	$twitter_link = get_field('twitter_link');
+		 	$link_name = get_field('link_name');
+		 ?>
+
+		 <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			 <div id="secondary" class="widget-area tweet-module" role="complementary">
+				 <a href="<?php echo $twitter_link ?>"><?php dynamic_sidebar( 'sidebar-2' ); ?></a>
+				 <a href="<?php echo $twitter_link ?>" class="follow-us-link"><?php echo $link_name; ?><span> &rsaquo;</span></a>
+			 </div>		 
+		 <?php endif; ?>
+		 
 	</div>
 </section>
-
-		<?php endwhile; // end of the loop. ?>
-		
-		<!-- Sidebar to host the twitter module -->
-		
-		
-		<?php
-		$twitter_link = get_field('twitter_link');
-		$link_name = get_field('link_name');
-		?>
-
-		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-			<div id="secondary" class="widget-area tweet-module" role="complementary">
-				<a href="<?php echo $twitter_link ?>"><?php dynamic_sidebar( 'sidebar-2' ); ?></a>
-				<a href="<?php echo $twitter_link ?>" class="follow-us-link"><?php echo $link_name; ?><span> &rsaquo;</span></a>
-			</div>
-		
-		<?php endif; ?>
-	
 	
 <?php get_footer(); ?>

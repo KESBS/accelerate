@@ -71,18 +71,20 @@
 	text-transform: uppercase;
 }
 
-/* widget on static homepage */
+/* twitter module on homepage*/
 
 #secondary.widget-area.tweet-module {
 	float: right;
 	width: 47%;
 }
 
-.widget-title{
-	color: #999999;
-	font-size: 16.5;
+.widget-title {
+	color: #a6a6a6;
+	font-size: 16px;
 	margin-bottom: 50px;
 	text-transform: uppercase;
+	font-family: 'Montserrat';
+	margin-top: 0;
 }
 #pi_simpletwittertweets-2 h3::after {
 	content: "@Accelerate";
@@ -97,11 +99,18 @@
 }
 #pi_simpletwittertweets-2 > ul > li{
 	font-weight: normal;
+	list-style: none;
+	font-size: 17px;
+	font-family: 'open sans', Arial, sans-serif;
+	margin-left: -20px;
 }
+
+
 #secondary > a.follow-us-link{
 	color: #45ac9d;
 	font-weight: bold;
 	font-family: 'Montserrat';
+	margin-left: 40px;
 }
 
 /* Case Studies */
