@@ -262,7 +262,42 @@ div h2 {
 	margin-bottom: 200px;
 	margin-right: 20%;
 	margin-top: 10%;
-	
+}
+/* Widget styles /*
+
+/* mailchimp newsletter sign-up */
+
+#mc4wp-form-1 > div.mc4wp-form-fields > p:nth-child(1){
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 22px;
+	margin-top: 0;
+}
+#mc4wp-form-1 > div.mc4wp-form-fields > p:nth-child(2) > label{
+	color: #45ac9d;
+}
+
+#mc4wp_form_widget-2 > h2{
+	padding-top: 50px;
+}
+
+#mc4wp_form_widget-2
+
+/* Search */
+
+#search-2{
+	padding-bottom: 40px;
+}
+
+#searchsubmit{
+	background-color: #45ac9d;
+	color: white;
+	font-family: 'Montserrat';
+}
+/* categories */
+
+#categories-2{
+	padding-top: 30px;
 }
 
 
