@@ -16,7 +16,10 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
 				<div class="site-description">
-				<p><?php bloginfo('description'); ?></p>
+				<p>
+					<a class="blog-info-name" href="<?php echo bloginfo('name'); ?>">Accelerate</a>
+					<?php bloginfo('description'); ?>
+				</p>
 				<p>&copy; <?php bloginfo('title'); ?>, LLC
 				</div>
 				

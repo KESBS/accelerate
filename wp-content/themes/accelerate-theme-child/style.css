@@ -241,6 +241,10 @@ aside.case-study-sidebar h6 {
 	list-style-type:none;
 }
 
+#colophon > div > div > p:nth-child(1) > a{
+	color:#45ac9d ;
+}
+
 /* 404 Page Styles */
 
 div h2 {
