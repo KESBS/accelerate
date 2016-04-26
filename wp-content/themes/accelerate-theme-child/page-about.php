@@ -51,5 +51,6 @@ get_header(); ?>
 	<?php echo get_field("contact_us");
 	?>
 	<a class="button" href="<?php echo home_url(); ?>/about">Contact Us</a>	
+</div>
 	
 <?php get_footer(); ?>

@@ -304,4 +304,46 @@ div h2 {
 	padding-top: 30px;
 }
 
+/* About Page Styles */
 
+#main > section > div > div > p{
+	font-size:25px;
+	font-family: Montserrat;
+	color:#ffffff;
+	text-align: center;
+	width: 600px;
+	padding-left: 180px;
+	padding-top:250px;
+}
+
+#main > section > div > div > p > a{
+	color: #45ac9d;
+}
+#main > section > div > div {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 314;
+	height: 300px;
+}
+#main > div.services{
+	display: block;
+}
+#main > div.services > h5{
+	font-weight: bold;
+}
+
+#main > div.services > div:nth-child(3) > img{
+	float: left;
+	margin-left: 250px;
+}
+
+#main > div.services > ul > p{
+	float: right;
+	width: 50%;
+	display: block;
+	margin-left: 20px;
+}
+#main > div.services > ul > h4{
+	
+}
